@@ -3,7 +3,7 @@ backend:
   repo: rhkdguskim/blog
   branch: main
 
-# Local backend for development (optional, requires additional setup)
+# Local backend for development
 # local_backend: true
 
 media_folder: "public/images/uploads"
