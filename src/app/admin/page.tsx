@@ -4,7 +4,8 @@ import { useEffect } from 'react';
 
 export default function AdminPage() {
     useEffect(() => {
-        window.location.href = '/admin/index.html';
+        const basePath = process.env.NODE_ENV === 'production' ? '/blog' : '';
+        window.location.href = `${basePath}/admin/index.html`;
     }, []);
 
     return (
