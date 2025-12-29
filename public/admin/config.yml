@@ -2,8 +2,6 @@ backend:
   name: github
   repo: rhkdguskim/blog
   branch: main
-  base_url: https://github.com
-  auth_endpoint: auth/github
 
 # Local backend for development (optional, requires additional setup)
 # local_backend: true
