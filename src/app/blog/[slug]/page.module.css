@@ -1,0 +1,76 @@
+.date {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+.content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #d4d4d8;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--foreground);
+}
+
+.content p {
+    margin-bottom: 1.5rem;
+}
+
+.content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+.content strong {
+    color: var(--foreground);
+    font-weight: 600;
+}
+
+.content pre {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    border: 1px solid var(--card-border);
+    margin-bottom: 1.5rem;
+}
+
+.content code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+}
+
+.content pre code {
+    color: #e2e8f0;
+}
+
+.content>p>code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.2em 0.4em;
+    border-radius: 0.25em;
+    color: var(--primary);
+}
