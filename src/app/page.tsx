@@ -16,8 +16,8 @@ export default function Home() {
           marginBottom: '1rem',
           lineHeight: 1.1
         }}>
-          Building the <span className="gradient-text">Future</span>,<br />
-          One Line at a Time.
+          Exploring the <span className="gradient-text">Mind</span><br />
+          of the Machine.
         </h1>
         <p style={{
           fontSize: '1.25rem',
@@ -25,7 +25,7 @@ export default function Home() {
           maxWidth: '600px',
           margin: '0 auto 2.5rem'
         }}>
-          Hi, I&apos;m Kwanghyeon Kim. I write about modern web development, software architecture, and the journey of learning.
+          Diving deep into Prompt Engineering, Agentic AI (Gemini, Codex, Claude), and the Philosophy of Artificial Intelligence.
         </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
           <Link href="/blog" style={{
@@ -38,7 +38,7 @@ export default function Home() {
           }}>
             Read the Blog
           </Link>
-          <Link href="https://github.com/kwanghyeonkim" target="_blank" style={{
+          <Link href="https://github.com/rhkdguskim" target="_blank" style={{
             background: 'rgba(255,255,255,0.1)',
             padding: '0.75rem 1.5rem',
             borderRadius: '0.5rem',
@@ -53,7 +53,7 @@ export default function Home() {
       {/* Recent Posts Section */}
       <section style={{ padding: '4rem 0' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-          <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>Recent Posts</h2>
+          <h2 style={{ fontSize: '2rem', fontWeight: 700 }}>Latest Insights</h2>
           <Link href="/blog" style={{ color: 'var(--primary)', fontWeight: 600 }}>
             View all &rarr;
           </Link>

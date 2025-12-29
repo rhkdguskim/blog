@@ -5,9 +5,9 @@ export default function BlogIndex() {
     return (
         <div className="container" style={{ padding: '4rem 1.5rem' }}>
             <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                <h1 style={{ fontSize: '3rem', fontWeight: 800, marginBottom: '1rem' }}>Blog</h1>
+                <h1 style={{ fontSize: '3rem', fontWeight: 800, marginBottom: '1rem' }}>AI Insights</h1>
                 <p style={{ color: '#94a3b8', fontSize: '1.2rem' }}>
-                    Thoughts, tutorials, and insights on development.
+                    Navigating the frontier of Artificial Intelligence, Engineering, and Ethics.
                 </p>
             </div>
 

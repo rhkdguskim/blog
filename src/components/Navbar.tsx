@@ -6,12 +6,12 @@ export default function Navbar() {
         <nav className={styles.navbar}>
             <div className={`container ${styles.navParams}`}>
                 <Link href="/" className={styles.logo}>
-                    Dev<span style={{ color: 'var(--primary)' }}>Log</span>
+                    AI<span style={{ color: 'var(--primary)' }}>Log</span>
                 </Link>
                 <div className={styles.links}>
                     <Link href="/" className={styles.link}>Home</Link>
-                    <Link href="/blog" className={styles.link}>Blog</Link>
-                    <Link href="https://github.com/kwanghyeonkim" target="_blank" className={styles.link}>GitHub</Link>
+                    <Link href="/blog" className={styles.link}>Articles</Link>
+                    <Link href="https://github.com/rhkdguskim" target="_blank" className={styles.link}>GitHub</Link>
                 </div>
             </div>
         </nav>
