@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import PostCard from '@/components/PostCard';
-import { posts } from '@/lib/posts';
+import { getSortedPostsData } from '@/lib/api';
 
 export default function Home() {
+  const posts = getSortedPostsData();
   const recentPosts = posts.slice(0, 3);
 
   return (

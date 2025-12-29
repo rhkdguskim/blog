@@ -1,7 +1,9 @@
 import PostCard from '@/components/PostCard';
-import { posts } from '@/lib/posts';
+import { getSortedPostsData } from '@/lib/api';
 
 export default function BlogIndex() {
+    const posts = getSortedPostsData();
+
     return (
         <div className="container" style={{ padding: '4rem 1.5rem' }}>
             <div style={{ textAlign: 'center', marginBottom: '4rem' }}>

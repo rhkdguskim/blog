@@ -1,0 +1,41 @@
+backend:
+  name: github
+  repo: rhkdguskim/blog
+  branch: main
+  base_url: https://github.com
+  auth_endpoint: auth/github
+
+# Local backend for development (optional, requires additional setup)
+# local_backend: true
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false}
+      - {label: "Excerpt", name: "excerpt", widget: "text"}
+      - {label: "Category", name: "category", widget: "select", options: ["Prompt Engineering", "Agent AI", "Philosophy", "Dev"]}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - name: "menu"
+        label: "Menu Configuration"
+        file: "content/settings/menu.json"
+        fields:
+          - label: "Menu Items"
+            name: "menuItems"
+            widget: "list"
+            fields:
+              - {label: "Label", name: "label", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}

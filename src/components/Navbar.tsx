@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import styles from './Navbar.module.css';
+import { getMenuItems } from '@/lib/api';
 
 export default function Navbar() {
+    const menuItems = getMenuItems();
+
     return (
         <nav className={styles.navbar}>
             <div className={`container ${styles.navParams}`}>
@@ -9,9 +12,11 @@ export default function Navbar() {
                     AI<span style={{ color: 'var(--primary)' }}>Log</span>
                 </Link>
                 <div className={styles.links}>
-                    <Link href="/" className={styles.link}>Home</Link>
-                    <Link href="/blog" className={styles.link}>Articles</Link>
-                    <Link href="https://github.com/rhkdguskim" target="_blank" className={styles.link}>GitHub</Link>
+                    {menuItems.map((item, index) => (
+                        <Link key={index} href={item.url} className={styles.link} target={item.url.startsWith('http') ? '_blank' : undefined}>
+                            {item.label}
+                        </Link>
+                    ))}
                 </div>
             </div>
         </nav>

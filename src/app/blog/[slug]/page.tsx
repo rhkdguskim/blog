@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { posts, getPost } from '@/lib/posts';
+import { getSortedPostsData, getPostData } from '@/lib/api';
 import styles from './page.module.css';
 
 interface PageProps {
@@ -8,6 +8,7 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
+    const posts = getSortedPostsData();
     return posts.map((post) => ({
         slug: post.slug,
     }));
@@ -15,7 +16,7 @@ export async function generateStaticParams() {
 
 export default async function BlogPost({ params }: PageProps) {
     const { slug } = await params;
-    const post = getPost(slug);
+    const post = await getPostData(slug);
 
     if (!post) {
         notFound();
@@ -43,6 +44,7 @@ export default async function BlogPost({ params }: PageProps) {
                 </h1>
                 <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', color: '#94a3b8' }}>
                     <time className={styles.date}>{post.date}</time>
+                    {post.category && <span>• {post.category}</span>}
                     <span>•</span>
                     <div className={styles.tags}>
                         {post.tags.map(tag => (
